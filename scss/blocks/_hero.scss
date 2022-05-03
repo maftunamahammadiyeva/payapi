@@ -1,63 +1,155 @@
 .hero {
-  padding: 80px 0px;
+  &__bottom{
+    padding: 75px 0;
+  }
+
 
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   &__left {
-    max-width: 470px;
+    margin-right: 206px;
   }
 
   &__heading {
     margin: 0;
-    margin-bottom: 16px;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 130%;
+    margin-bottom: 24px;
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -0.553846px;
+    color: #36536B;
+    max-width: 546px;
   }
 
-  &__desc {
-    margin: 0;
+  &__form{
+    position: relative;
     margin-bottom: 16px;
-    line-height: 24px;
   }
 
-  &__iframe {
+
+  &__input {
+    background: #FBFCFE;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    border-radius: 24px;
+    padding-top: 16px;
+    padding-right: 235px;
+    padding-bottom: 14px;
+    padding-left: 27px;
     border: none;
-    border-radius: 10px;
+  }
+
+  &__desc{
+    font-size: 15px;
+    line-height: 18px;
+    opacity: 0.7;
+    margin: 0;
+  }
+
+
+}
+
+.hero--button{
+  border: none;
+  position: absolute;
+  left: 300px;
+}
+
+.hero--button:hover{
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1440px){
+  .container {
+    max-width: 1352px;
   }
 }
 
-@media only screen and (max-width: 980px){
+@media only screen and (max-width: 1200px){
+  .container {
+    max-width: 960px;
+  }
   .hero {
-    padding: 40px 0px;
+
+    &__bottom{
+      padding: 0;
+      padding-top: 48px;
+      padding-bottom: 100px;
+    }
 
     &__container {
-      flex-direction: column;
+      display: flex;
+      flex-direction: column-reverse;
     }
 
     &__left {
-      max-width: 100%;
+      margin-right: 0;
     }
 
-    &__iframe {
-      margin-top: 20px;
-      width: 100%;
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .hero {
     &__heading {
-      font-size: 25px;
+      font-size: 48px;
+      line-height: 56px;
+      text-align: center;
+      letter-spacing: -0.369231px;
+      color: #36536B;
     }
 
     &__desc {
-      font-size: 14px;
+      text-align: center;
     }
+
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .container {
+    max-width: 540px;
+  }
+
+  .hero {
+
+    &__heading {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    &__form{
+      position: static;
+    }
+
+    &__input {
+      max-width: 455px;
+      width: 100%;
+      padding-top: 16px;
+      padding-right: 0;
+      padding-bottom: 14px;
+      padding-left: 27px;
+      border: none;
+    }
+  }
+
+  .hero--button{
+    position: static;
+    max-width: 455px;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  .container {
+    max-width: 100%;
   }
 }

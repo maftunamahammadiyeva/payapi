@@ -14,10 +14,15 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-family: "Arial", sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: black;
+  color: #6C8294;
+  background: #EDF3F8;
+
+  background-image: url("../images/backroung.png");
+  background-repeat: no-repeat;
+  background-position: center right;
 }
 
 img {
